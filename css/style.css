@@ -1,0 +1,629 @@
+/*   
+ * TABLE OF CONTENTS
+ *
+ * 00 - Global
+ * 01 - Typography
+ * 02 - Layout
+ * 03 - Modules
+ */
+/* COLORS ======= */
+/* EM Converter */
+/* Transition */
+/* Round Corner */
+/* Drop Shadow */
+a {
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+  -ms-transition-duration: .25s;
+  -o-transition-duration: .25s;
+  transition-duration: .25s;
+  border-bottom: 1px solid transparent;
+  color: #252525;
+  text-decoration: none; }
+  a:hover {
+    color: #888888; }
+  a:active {
+    color: black; }
+
+p a, ul a {
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+  -ms-transition-duration: .25s;
+  -o-transition-duration: .25s;
+  transition-duration: .25s;
+  border-bottom: 1px solid transparent; }
+
+p a:hover, ul a:hover {
+  -webkit-transition-duration: .25s;
+  -moz-transition-duration: .25s;
+  -ms-transition-duration: .25s;
+  -o-transition-duration: .25s;
+  transition-duration: .25s; }
+
+body {
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+  font-size: 1em; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 12px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 24px;
+  color: inherit;
+  text-rendering: optimizelegibility; }
+
+h1 {
+  font-weight: 700; }
+
+h2 {
+  font-weight: 700; }
+
+h3 {
+  font-weight: 800; }
+
+h4 {
+  font-weight: 600; }
+
+h5 {
+  font-weight: 400; }
+
+h6 {
+  font-weight: 300; }
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.333em;
+  margin: 0.7em 0 0em; }
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  line-height: 1.333em;
+  margin: 2em 0 0.5em 0; }
+
+h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 1.333em;
+  margin: 2em 0 0.5em 0; }
+
+h4 {
+  font-size: 1.125em;
+  font-weight: bold;
+  line-height: 1.333em; }
+
+h5 {
+  font-weight: bold;
+  line-height: 1.333em; }
+
+p.intro {
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.5em; }
+
+.run-in {
+  font-size: .8em;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .15em; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+cite {
+  font-style: normal; }
+
+blockquote {
+  font-style: italic;
+  line-height: 1.75em;
+  font-size: 1.2em; }
+
+blockquote:before {
+  font-family: Georgia, serif;
+  content: "“";
+  font-size: 2.75em;
+  text-indent: -.95em;
+  margin-top: .1em;
+  float: left;
+  opacity: .3; }
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 24px;
+  border-left: 5px solid #eeeeee; }
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.25; }
+
+blockquote small {
+  display: block;
+  line-height: 24px;
+  color: #999999; }
+
+blockquote small:before {
+  content: '\2014 \00A0'; }
+
+.subscript {
+  vertical-align: sub;
+  font-size: 100%;
+  margin-right: .4em;
+  letter-spacing: .1em;
+  line-height: 0em; }
+
+cite {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  margin-top: 1em;
+  font-weight: 900; }
+
+cite:before {
+  content: "- "; }
+
+.kern {
+  letter-spacing: -0.05em; }
+
+/* TYPOGRAPHY */
+/*
+Based upon the wonderful
+Type-A-File "Kickoff" 
+Digital Street Cred goes out to Russ Maschmeyer, aka StrangeNative.
+http://www.strangenative.com
+Creative Commons License by Attribution. 
+*/
+/*Pick Your Fonts*/
+i {
+  font-size: 1.5em; }
+
+/*Size & Vertical Rhythm*/
+body {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #444444; }
+
+.subtitle {
+  font-size: 1.5em;
+  line-height: 1.618em;
+  font-weight: 400;
+  margin: 1em 0 0.5em;
+  color: #555555;
+  font-style: italic; }
+
+/*HTML Standard Elements*/
+h1 {
+  font-size: 2.5em;
+  line-height: 1.5em;
+  font-weight: 700;
+  margin: 1em 0 0.25em;
+  text-transform: uppercase;
+  letter-spacing: .125em; }
+
+h2 {
+  font-weight: 700;
+  font-size: 1.75em;
+  line-height: 1.5em;
+  margin: 1em 0 0;
+  text-transform: uppercase;
+  letter-spacing: .1em; }
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  margin: 1em 0 1em 0;
+  letter-spacing: .2em; }
+
+h4 {
+  font-weight: bold;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  padding: 2em 0 0 0;
+  letter-spacing: .25em; }
+
+h5 {
+  font-weight: 400;
+  font-size: 1em;
+  padding: 2% 0 0.5% 0.5em; }
+
+h1 + img, h2 + img {
+  margin-top: 1em; }
+
+small {
+  display: block;
+  font-size: .5em;
+  letter-spacing: .05em;
+  margin: 2.2em 0 -0.2em;
+  font-style: italic;
+  line-height: 1.75em; }
+
+ul {
+  list-style-position: outside;
+  list-style-type: none;
+  line-height: 1.5; }
+
+ol {
+  list-style-position: outside;
+  list-style-type: decimal; }
+
+blockquote {
+  font-style: italic;
+  line-height: 1.75em;
+  font-size: 2em;
+  float: left;
+  font-family: Georgia, times, serif;
+  font-style: italic;
+  font-weight: 400;
+  border-top: 1px solid #151515;
+  border-bottom: 1px solid #151515;
+  padding: 1em 0;
+  margin: 1em 0; }
+
+blockquote:before {
+  font-family: Georgia, serif;
+  content: "";
+  font-size: 2.75em;
+  text-indent: -.95em;
+  margin-top: .1em;
+  float: left;
+  opacity: .3; }
+
+cite {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  margin-top: 1em;
+  font-weight: 900; }
+
+cite:before {
+  content: "- "; }
+
+pre {
+  margin: 1.5em; }
+
+dl {
+  margin: 1.45em 0;
+  /*border-top:1px dotted #999;border-bottom:1px dotted #999;*/ }
+
+dt {
+  word-spacing: .2em;
+  border-bottom: 1px dotted #999999;
+  margin-top: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: .2em;
+  padding-bottom: .5em; }
+
+dt:before {
+  content: "\2767";
+  font-size: 1.25em;
+  text-indent: -1.5em;
+  float: left; }
+
+dd {
+  font-style: italic;
+  font-size: .9em;
+  margin-bottom: 1.65em;
+  line-height: 1.75em;
+  margin-top: .75em; }
+
+abbr {
+  text-transform: uppercase;
+  font-size: .9em;
+  letter-spacing: .1em; }
+
+p {
+  margin-bottom: 0;
+  hyphenate: auto;
+  hyphenate-before: 2;
+  hyphenate-after: 3;
+  hyphenate-lines: 3;
+  orphans: 4; }
+
+p span.pullquote {
+  text-indent: 0; }
+
+/*Compositional Elements*/
+.intro {
+  font-size: 1.33em;
+  line-height: 1.693em;
+  font-style: normal;
+  margin: -0.35em 0 1em 0; }
+
+.intro, .pullquote {
+  font-weight: 500; }
+
+.section {
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: .25em;
+  font-size: .9em;
+  font-weight: bold; }
+
+.run-in {
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: .1em;
+  font-size: .8em;
+  font-weight: bold; }
+
+.superscript {
+  font-family: arial, sans-serif;
+  vertical-align: super;
+  font-size: 75%;
+  margin-right: .4em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: .1em;
+  line-height: 0; }
+
+.deck .superscript {
+  font-size: 50%; }
+
+.subscript {
+  font-family: arial, sans-serif;
+  vertical-align: sub;
+  font-size: 75%;
+  margin-right: .4em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: .1em;
+  line-height: 0em; }
+
+a.superscript, a.subscript {
+  text-decoration: none; }
+
+aside, .sidenote {
+  display: block;
+  font-size: .83em;
+  font-style: italic;
+  margin-top: 1.2em;
+  position: absolute;
+  right: 0;
+  width: 20%; }
+
+aside h1, .sidenote h1 {
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-style: normal;
+  letter-spacing: .2em;
+  font-weight: 900; }
+
+aside p, .sidenote p {
+  line-height: 1.7em;
+  margin: 1.3em 0;
+  font-style: normal; }
+
+aside ul, aside ol, .sidenote ul, .sidenote ol {
+  margin-top: 1.3em;
+  line-height: 1.7em; }
+
+aside ul li, aside ol li, .sidenote ul li, .sidenote ol li {
+  margin-bottom: 1.3em; }
+
+.pullquote {
+  font-style: italic;
+  letter-spacing: .05em;
+  margin: 0.3em 0.7em 0.3em -0.5em;
+  padding-top: .15em;
+  line-height: 1.5em;
+  display: block;
+  float: left;
+  font-size: 2em;
+  width: 55%; }
+
+.pullquote:before {
+  font-family: Georgia, serif;
+  content: "";
+  font-size: 1.5em;
+  text-indent: -.7em;
+  margin-top: .05em;
+  float: left;
+  opacity: .3; }
+
+.footnote {
+  border-top: 1px solid black;
+  font-size: .75em;
+  margin-top: 3.5em; }
+
+.footnote li {
+  margin: 1.5em 0 1.5em;
+  word-spacing: .1em;
+  line-height: 1.75em; }
+
+.caption {
+  font-size: .8em;
+  font-style: italic;
+  margin: 0.6em 0 -0.2em; }
+
+.kicker .run-in {
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: .25em;
+  font-size: .9em; }
+
+.drop-cap {
+  display: block;
+  font-style: normal;
+  font-size: 5.25em;
+  float: left;
+  margin: 0.04em 0.2em 0 0;
+  line-height: .9em;
+  font-weight: 700; }
+
+/* Tweaks */
+.kern {
+  letter-spacing: -.1em; }
+
+::-moz-selection {
+  background: #252525;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #252525;
+  color: #fff;
+  text-shadow: none; }
+
+body {
+  width: 100%;
+  *zoom: 1; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
+
+/* Layout */
+/* Responsive Grid */
+/* ====================================================================== Header */
+header {
+  top: 0;
+  float: left;
+  width: 100%;
+  text-align: center;
+  background-color: #FFF;
+  z-index: 9000;
+  -webkit-box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.5);
+  box-shadow: 1px 1px 10px rgba(50, 50, 50, 0.5); }
+
+#logo {
+  float: left;
+  padding: 0 1em; }
+
+.site-subtitle {
+  font-size: .75em;
+  padding: 0;
+  margin: 0;
+  line-height: 3em;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 700; }
+
+.site-title {
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+  line-height: .5em;
+  text-align: left; }
+
+#header-links-primary {
+  width: 100%;
+  float: right;
+  margin: 0;
+  *zoom: 1; }
+  @media screen and (min-width: 37.5em) {
+    #header-links-primary {
+      width: auto; } }
+  #header-links-primary:before, #header-links-primary:after {
+    content: "";
+    display: table; }
+  #header-links-primary:after {
+    clear: both; }
+  #header-links-primary li {
+    width: 100%;
+    float: left;
+    /*
+    	Add Class with JS for Mobile to hide nav toggle, remove to show.
+    	.hidden{
+    	height:0;
+    	overflow:hidden;
+    	}
+    */ }
+    @media screen and (min-width: 31.25em) {
+      #header-links-primary li {
+        width: 25%; } }
+    @media screen and (min-width: 37.5em) {
+      #header-links-primary li {
+        width: auto; } }
+
+.header-btn {
+  display: block;
+  padding: 1.5em 1.5em 0;
+  height: 3em;
+  color: #252525; }
+  .header-btn:hover {
+    color: #888888; }
+  .header-btn:active {
+    background: #252525;
+    color: white; }
+  @media screen and (min-width: 37.5em) {
+    .header-btn {
+      border-left: 1px solid #252525; } }
+
+.header-utility {
+  float: right; }
+
+/* ====================================================================== Main Container */
+#main-container {
+  padding: 3em 1em 1em; }
+
+section {
+  float: left;
+  margin: 0;
+  *zoom: 1; }
+  section:before, section:after {
+    content: "";
+    display: table; }
+  section:after {
+    clear: both; }
+
+article {
+  max-width: 62.5em;
+  padding: 0 0 2em 0; }
+
+/* ====================================================================== Work Post */
+/* ====================================================================== Writing Post */
+/* ====================================================================== Photo Block + Caption */
+/* ====================================================================== Footer */
+footer {
+  float: left;
+  width: 100%;
+  background-color: #252525;
+  color: #888888; }
+  footer a {
+    color: #888888; }
+    footer a:hover {
+      color: #aaaaaa; }
+    footer a:active {
+      color: white; }
+
+#footer-links-primary {
+  float: left; }
+  #footer-links-primary li {
+    float: left;
+    padding: 1.5em 2em 1em 0; }
+
+#footer-links-secondary {
+  float: right; }
+  #footer-links-secondary li {
+    float: left;
+    padding: 1.5em 2em 1em; }
+
+#copyright {
+  float: left;
+  width: 100%;
+  margin: 0 0 2em; }
+  #copyright p {
+    font-size: .75em;
+    margin: 0 2em;
+    padding: 1em 0; }

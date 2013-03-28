@@ -1,0 +1,23 @@
+a{
+@include quarter-second-transition;
+border-bottom: 1px solid transparent;
+color:$dark-neutral;
+text-decoration:none;
+	
+&:hover{
+color:$medium-neutral;
+}
+
+&:active{
+color:$black;
+}
+
+  }
+
+p a, ul a{
+	@include quarter-second-transition;
+	border-bottom: 1px solid transparent;
+}
+p a:hover, ul a:hover,{
+	@include quarter-second-transition;
+}
